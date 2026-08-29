@@ -31,7 +31,7 @@ Register at [prometheusquantengine.com](https://prometheusquantengine.com) to in
 European options are evaluated via highly optimized Control Variates to tighten the Confidence Interval (CI) in record time.
 
 ```python
-from prometheus_quant import PrometheusClient, EuropeanOption, OptionType
+from prometheus_qengine import PrometheusClient, EuropeanOption, OptionType
 
 # 1. Initialize the client
 client = PrometheusClient(api_key="pmt_live_your_secure_api_key")
@@ -63,7 +63,7 @@ When pricing complex path-dependent instruments with step-function discontinuiti
 If your configuration exceeds 50 million total computational steps, the SDK automatically routes the payload to the asynchronous Celery broker and handles the polling loop silently.
 
 ```python
-from prometheus_quant import PrometheusClient, BarrierOption, OptionType, BarrierType
+from prometheus_qengine import PrometheusClient, BarrierOption, OptionType, BarrierType
 
 client = PrometheusClient(api_key="pmt_live_your_secure_api_key")
 
@@ -93,7 +93,7 @@ print(f"Confidence Interval: [{result.ci_lower}, {result.ci_upper}]")
 The SDK translates HTTP status codes into strict Pythonic exceptions:
 
 ```python
-from prometheus_quant.exceptions import InsufficientCreditsError, AuthenticationError
+from prometheus_qengine.exceptions import InsufficientCreditsError, AuthenticationError
 
 try:
     result = client.price(option)
