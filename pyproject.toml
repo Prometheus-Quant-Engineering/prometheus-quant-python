@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prometheus-qengine"
+version = "1.0.0"
+authors = [
+  { name="Prometheus Quant Engineering", email="dev@prometheusquantengine.com" },
+]
+description = "Official Python SDK for the Prometheus Quant Engine (HPC Monte Carlo)"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+    "requests>=2.25.0",
+    "pydantic>=2.0.0",
+    "pandas>=1.3.0"
+]
+
+[project.urls]
+"Homepage" = "https://prometheusquantengine.com"
+"Documentation" = "https://prometheusquantengine.com/web-docs"
